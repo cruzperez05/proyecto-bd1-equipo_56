@@ -15,6 +15,7 @@
 proyecto-bd1-equipo_56/
 ├── docs/
 │   ├── etapa-01/
+│   │   └── equipo56_etapa_1.pdf
 │   ├── etapa-02/
 │   ├── etapa-03/
 │   ├── etapa-04/
