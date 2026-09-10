@@ -4,11 +4,11 @@
 
 
 ## Integrantes: 
-• Alfaro, Lucas Rodrigo 
-• Berton, Agustín Matías 
-• Rudas, Emilia Catalina 
-• Alderete, Enzo Damián 
-• Pérez Rollheiser, Cruz Benjamín
+- Alfaro, Lucas Rodrigo 
+- Berton, Agustín Matías 
+- Rudas, Emilia Catalina 
+- Alderete, Enzo Damián 
+- Pérez Rollheiser, Cruz Benjamín
 
 ## Estructura del repositorio:
 ```text
