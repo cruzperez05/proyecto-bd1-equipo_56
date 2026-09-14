@@ -1,0 +1,59 @@
+# Transformación del Modelo Entidad-Relación al Modelo Relacional
+### Sistema de Gestión para Local de Indumentaria Grupo 56
+
+### PRODUCTO
+| Atributo | Clave | Observación |
+| :--- | :---: | :--- |
+| *codProducto* | PK | Identificador único del producto. |
+| nombre | | Atributo de Producto. |
+| descripcion | | Atributo de Producto. |
+| precioActual | | Precio vigente del producto. |
+| idCategoria | FK | Referencia a CATEGORIA(idCategoria); puede quedar NULL según la participación 0..1 del DER. |
+
+### CATEGORIA
+| Atributo | Clave | Observación |
+| :--- | :---: | :--- |
+| *idCategoria* | PK | Identificador único de la categoría. |
+| nombreCategoria | | Nombre de la categoría. |
+
+### VARIANTE
+| Atributo | Clave | Observación |
+| :--- | :---: | :--- |
+| *idVariante* | PK | Identificador único de la variante. |
+| talle | | Talle de la variante. |
+| color | | Color de la variante. |
+| stock | | Cantidad disponible. |
+| codProducto | FK | Referencia a PRODUCTO(codProducto); cada variante pertenece a un producto. |
+
+### CLIENTE
+| Atributo | Clave | Observación |
+| :--- | :---: | :--- |
+| *idCliente* | PK | Identificador único del cliente. |
+| nombre | | Nombre del cliente. |
+| apellido | | Apellido del cliente. |
+| DNI | | Documento del cliente. |
+| telefono | | Teléfono de contacto. |
+| email | | Correo electrónico. |
+
+### METODO_PAGO
+| Atributo | Clave | Observación |
+| :--- | :---: | :--- |
+| *idMetodoPago* | PK | Identificador único del método de pago. |
+| nombre | | Nombre del método de pago. |
+
+### VENTA
+| Atributo | Clave | Observación |
+| :--- | :---: | :--- |
+| *idVenta* | PK | Identificador único de la venta. |
+| fecha | | Fecha de realización de la venta. |
+| idCliente | FK | Referencia a CLIENTE(idCliente); puede ser NULL porque una venta puede no estar asociada a un cliente. |
+| idMetodoPago | FK | Referencia a METODO_PAGO(idMetodoPago); cada venta registra un método de pago. |
+
+### DETALLE_VENTA
+| Atributo | Clave | Observación |
+| :--- | :---: | :--- |
+| *idDetalle* | PK | Identificador único del detalle. |
+| cantidad | | Cantidad vendida. |
+| precioUnitario | | Precio unitario correspondiente al momento de la venta. |
+| idVenta | FK | Referencia a VENTA(idVenta). |
+| idVariante | FK | Referencia a VARIANTE(idVariante). |
