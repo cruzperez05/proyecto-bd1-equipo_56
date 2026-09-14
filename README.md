@@ -20,8 +20,6 @@ proyecto-bd1-equipo_56/
 │   ├── etapa-03/
 │   ├── etapa-04/
 │   └── etapa-05/
-├── modelos/der/
-│   └── 
 ├── sql/
 │   ├── consultas/
 │   ├── ddl/
