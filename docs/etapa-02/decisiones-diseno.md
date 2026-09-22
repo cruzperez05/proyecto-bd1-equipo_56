@@ -19,3 +19,13 @@ Durante la transformación del modelo Entidad-Relación al modelo relacional se 
 •	Cliente como relación independiente: se decidió mantener Cliente como una relación independiente y utilizar idCliente como clave foránea en Venta. Además, esta clave puede admitir valores nulos, ya que el modelo contempla que una venta pueda realizarse sin estar asociada a un cliente. 
 
 •	Uso de claves primarias y foráneas: se asignó una clave primaria a cada relación para identificar sus registros de forma única y se utilizaron claves foráneas para 
+
+• Identificación de las variantes usando clave propia: se decidió utilizar idVariante como clave primaria de Variante, esto permite identificar cada variante de manera simple y facilita su referencia desde Detalle_Venta.
+
+• Identificación de los detalles de venta: se decidió utilizar idDetalle como clave primaria de Detalle_Venta. De esta forma, cada línea de una venta puede identificarse individualmente .
+
+• Registro de la fecha de la venta:se decidio almacenar fecha en Venta, ya que corresponde a la operación completa. De esta manera, todos los detalles pertenecientes a una misma venta comparten la misma fecha.
+
+• Cantidad almacenada en Detalle_Venta: se decidió almacenar cantidad en Detalle_Venta debido a que representa cuántas unidades de una determinada variante se vendieron en una operación. Una misma variante puede aparecer en diferentes ventas con cantidades diferentes.
+
+• Tipos de métodos de pago: Se decidió mantener los métodos de pago como registros independientes en Metodo_Pago, permitiendo reutilizar los mismos métodos en diferentes ventas y evitando almacenar repetidamente valores como "Efectivo", "Tarjeta", "Debito" o "Mercado Pago".
