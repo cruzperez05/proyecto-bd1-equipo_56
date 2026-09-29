@@ -4,6 +4,9 @@
 
 -- 1. TABLA: Cliente
 CREATE TABLE Cliente (
+    idCliente INT PRIMARY KEY,
+    dni VARCHAR(15) NOT NULL UNIQUE,
+    nombre VARCHAR(50) NOT NULL,
     
 );
 
