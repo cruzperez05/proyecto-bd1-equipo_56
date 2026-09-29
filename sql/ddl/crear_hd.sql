@@ -26,7 +26,7 @@ CREATE TABLE Variante (
 );
 
 -- 5. TABLA: Productos
-CREATE TABLE Productos (
+CREATE TABLE Producto (
     
 );
 
