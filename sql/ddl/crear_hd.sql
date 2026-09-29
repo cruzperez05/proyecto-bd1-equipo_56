@@ -21,7 +21,7 @@ CREATE TABLE Metodo_Pago (
 );
 
 -- 4. TABLA: Prendas
-CREATE TABLE Prendas (
+CREATE TABLE Variante (
     
 );
 
