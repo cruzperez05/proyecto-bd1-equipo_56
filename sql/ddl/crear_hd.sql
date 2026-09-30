@@ -25,11 +25,24 @@ CREATE TABLE Metodo_Pago (
     descripcion VARCHAR(100)
 );
 
--- 4. TABLA: Prendas
+-- 4. TABLA: Variante
 CREATE TABLE Variante (
-    
-);
+    idVariante INT PRIMARY KEY,
+    talle VARCHAR(10) NOT NULL,
+    color VARCHAR(30) NOT NULL,
+    stock INT NOT NULL,
+    codProducto INT NOT NULL,
 
+    CONSTRAINT FK_Variante_Producto
+        FOREIGN KEY (codProducto)
+        REFERENCES Producto(codProducto),
+
+    CONSTRAINT CK_Variante_Stock
+        CHECK (stock >= 0),
+
+    CONSTRAINT UQ_Variante_Producto_Talle_Color
+        UNIQUE (codProducto, talle, color)
+);
 -- 5. TABLA: Productos
 CREATE TABLE Producto (
     
