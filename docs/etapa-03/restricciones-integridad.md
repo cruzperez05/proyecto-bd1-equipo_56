@@ -19,4 +19,4 @@ idVariante se definió como clave primaria para identificar cada variante de for
 idVenta se definió como clave primaria para identificar cada venta de forma única. Los atributos idCliente e idMetodoPago se definieron como claves foráneas, garantizando que cada venta esté asociada a un cliente y a un método de pago existentes. Además, fecha, idCliente e idMetodoPago se definieron como obligatorios mediante NOT NULL.
 
 ## 7. DETALLE_VENTA
-
+idDetalle se definió como clave primaria para identificar cada detalle de venta de forma única. Los atributos idVenta e idVariante se definieron como claves foráneas, garantizando que cada detalle esté asociado a una venta y a una variante de producto existentes. Además, cantidad, precioUnitario, idVenta e idVariante se definieron como obligatorios mediante NOT NULL. Se establecieron restricciones CHECK sobre cantidad y precioUnitario para garantizar que ambos valores sean mayores que cero.
