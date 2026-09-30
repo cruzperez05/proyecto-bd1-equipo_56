@@ -20,4 +20,4 @@ La tabla Variante se implementó con idVariante como clave primaria, permitiendo
 La tabla Venta se implementó con idVenta como clave primaria y fecha como dato obligatorio. Además, incluye las claves foráneas idCliente y idMetodoPago, que permiten relacionar cada venta con el cliente que la realizó y con el método de pago utilizado.
 
 ## 7. DETALLE_VENTA
-
+La tabla Detalle_Venta se implementó con idDetalle como clave primaria, permitiendo identificar de manera única cada detalle de una venta. Además, incluye los atributos cantidad y precioUnitario, que permiten registrar la cantidad de unidades vendidas y el precio correspondiente al momento de realizar la venta. También incluye las claves foráneas idVenta e idVariante, que relacionan cada detalle con la venta y con la variante de producto correspondiente.
