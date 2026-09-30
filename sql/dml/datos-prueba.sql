@@ -23,6 +23,35 @@ USE proyecto_bd_equipo56;
 -- INSERTs de Variante
 -- ---------------------------------------------------------------------
 
+INSERT INTO Variante (idVariante, talle, color, stock, codProducto)
+VALUES (1, 'S', 'Negro', 10, 1);
+
+INSERT INTO Variante (idVariante, talle, color, stock, codProducto)
+VALUES (2, 'M', 'Negro', 8, 1);
+
+INSERT INTO Variante (idVariante, talle, color, stock, codProducto)
+VALUES (3, 'L', 'Negro', 6, 1);
+
+INSERT INTO Variante (idVariante, talle, color, stock, codProducto)
+VALUES (4, 'M', 'Blanco', 12, 2);
+
+INSERT INTO Variante (idVariante, talle, color, stock, codProducto)
+VALUES (5, 'L', 'Blanco', 9, 2);
+
+INSERT INTO Variante (idVariante, talle, color, stock, codProducto)
+VALUES (6, 'S', 'Azul', 7, 3);
+
+INSERT INTO Variante (idVariante, talle, color, stock, codProducto)
+VALUES (7, 'M', 'Azul', 11, 3);
+
+INSERT INTO Variante (idVariante, talle, color, stock, codProducto)
+VALUES (8, 'L', 'Rojo', 5, 4);
+
+INSERT INTO Variante (idVariante, talle, color, stock, codProducto)
+VALUES (9, 'M', 'Rojo', 8, 4);
+
+INSERT INTO Variante (idVariante, talle, color, stock, codProducto)
+VALUES (10, 'XL', 'Verde', 4, 5);
 
 -- ---------------------------------------------------------------------
 -- INSERTs de Productos
