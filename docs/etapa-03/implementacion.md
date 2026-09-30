@@ -4,7 +4,7 @@
 Se define para almacenar la información de los clientes. Contiene un identificador único idCliente, datos personales básicos como nombre, apellido y DNI, y tambiendatos de contacto como el teléfono y el correo electrónico.
 
 ## 2. METODO_PAGO
-
+Tabla encargada de registrar los distintos medios de pago aceptados, por ejemplo, efectivo, tarjetas, billeteras virtuales, etc. Cuenta con un identificador único idMetodoPago y una descripción nombre para identificar cada una.
 
 ## 3. CATEGORIA
 
