@@ -25,7 +25,15 @@ INSERT INTO Cliente (idCliente, nombre, apellido, DNI, telefono, email) VALUES
 -- ---------------------------------------------------------------------
 -- INSERTs de Metodo_Pago
 -- ---------------------------------------------------------------------
-
+INSERT INTO Metodo_Pago (idMetodoPago, nombre) VALUES 
+(1, 'Efectivo'),
+(2, 'Tarjeta de Crédito'),
+(3, 'Tarjeta de Débito'),
+(4, 'Mercado Pago'),
+(5, 'Transferencia Bancaria'),
+(6, 'Tarjeta Prepaga'),
+(7, 'Billetera Virtual'),
+(8, 'Pago Fácil / RapiPago');
 
 -- ---------------------------------------------------------------------
 -- INSERTs de Variante
