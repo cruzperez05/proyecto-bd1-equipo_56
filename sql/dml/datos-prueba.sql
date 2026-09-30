@@ -32,7 +32,26 @@ USE proyecto_bd_equipo56;
 -- ---------------------------------------------------------------------
 -- INSERTs de Venta
 -- ---------------------------------------------------------------------
+INSERT INTO Venta (idVenta, fecha, idCliente, idMetodoPago)
+VALUES (2, '2026-09-02', 2, 2);
 
+INSERT INTO Venta (idVenta, fecha, idCliente, idMetodoPago)
+VALUES (3, '2026-09-03', 3, 3);
+
+INSERT INTO Venta (idVenta, fecha, idCliente, idMetodoPago)
+VALUES (4, '2026-09-04', 4, 1);
+
+INSERT INTO Venta (idVenta, fecha, idCliente, idMetodoPago)
+VALUES (5, '2026-09-05', 5, 8);
+
+INSERT INTO Venta (idVenta, fecha, idCliente, idMetodoPago)
+VALUES (6, '2026-09-06', 6, 4);
+
+INSERT INTO Venta (idVenta, fecha, idCliente, idMetodoPago)
+VALUES (7, '2026-09-07', 7, 5);
+
+INSERT INTO Venta (idVenta, fecha, idCliente, idMetodoPago)
+VALUES (8, '2026-09-08', 8, 6);
 
 -- ---------------------------------------------------------------------
 -- INSERTs de Detalle_Venta
