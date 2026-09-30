@@ -78,6 +78,9 @@ VALUES (10, 'XL', 'Verde', 4, 5);
 -- INSERTs de Venta
 -- ---------------------------------------------------------------------
 INSERT INTO Venta (idVenta, fecha, idCliente, idMetodoPago)
+VALUES (1, '2026-09-01', 1, 7);
+
+INSERT INTO Venta (idVenta, fecha, idCliente, idMetodoPago)
 VALUES (2, '2026-09-02', 2, 2);
 
 INSERT INTO Venta (idVenta, fecha, idCliente, idMetodoPago)
