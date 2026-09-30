@@ -7,7 +7,10 @@ CREATE TABLE Cliente (
     idCliente INT PRIMARY KEY,
     dni VARCHAR(15) NOT NULL UNIQUE,
     nombre VARCHAR(50) NOT NULL,
-    
+    apellido VARCHAR(50) NOT NULL,
+    telefono VARCHAR(20),
+    email VARCHAR(100) UNIQUE,
+    direccion VARCHAR(150)
 );
 
 -- 2. TABLA: Categoria
