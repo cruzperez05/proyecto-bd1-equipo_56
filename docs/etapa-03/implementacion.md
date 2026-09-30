@@ -13,6 +13,7 @@
 
 
 ## 5. VARIANTE
+La tabla Variante se implementó con idVariante como clave primaria, permitiendo identificar de manera única cada variante de un producto. Además, incluye los atributos talle, color y stock, que permiten registrar las características y la cantidad disponible de cada variante. También incluye la clave foránea codProducto, que relaciona cada variante con el producto al que pertenece.
 
 
 ## 6. VENTA
