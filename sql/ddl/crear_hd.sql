@@ -78,5 +78,23 @@ CREATE TABLE Venta (
 
 -- 7. TABLA: Detalle_Venta
 CREATE TABLE Detalle_Venta (
-    
+    idDetalle INT PRIMARY KEY,
+    cantidad INT NOT NULL,
+    precioUnitario DECIMAL(10,2) NOT NULL,
+    idVenta INT NOT NULL,
+    idVariante INT NOT NULL,
+
+    CONSTRAINT FK_Detalle_Venta
+        FOREIGN KEY (idVenta)
+        REFERENCES Venta(idVenta),
+
+    CONSTRAINT FK_Detalle_Variante
+        FOREIGN KEY (idVariante)
+        REFERENCES Variante(idVariante),
+
+    CONSTRAINT CK_Detalle_Cantidad
+        CHECK (cantidad > 0),
+
+    CONSTRAINT CK_Detalle_Precio
+        CHECK (precioUnitario > 0)
 );
