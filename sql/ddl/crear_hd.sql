@@ -21,6 +21,8 @@ CREATE TABLE Categoria (
 -- 3. TABLA: Metodo_Pago
 CREATE TABLE Metodo_Pago (
     idMetodoPago INT PRIMARY KEY,
+    nombreMetodo VARCHAR(50) NOT NULL UNIQUE,
+    descripcion VARCHAR(100)
 );
 
 -- 4. TABLA: Prendas
