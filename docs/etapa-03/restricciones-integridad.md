@@ -7,10 +7,10 @@ idCliente se definió como clave primaria para identificar cada cliente de forma
 idMetodoPago se definió como clave primaria para identificar cada método de pago de forma única. El atributo nombre se definió como obligatorio mediante NOT NULL para asegurar que toda modalidad de pago cuente con su respectiva descripción.
 
 ## 3. CATEGORIA
-
+idCategoria se definió como clave primaria para identificar cada categoría de forma única. El atributo nombreCategoria se definió como obligatorio mediante NOT NULL para asegurar que toda categoría tenga un nombre. Además, se estableció una restricción UNIQUE sobre nombreCategoria para evitar el registro de categorías duplicadas.
 
 ## 4. PRODUCTO
-
+codProducto se definió como clave primaria para identificar cada producto de forma única. El atributo idCategoria se definió como clave foránea, garantizando que, cuando se indique una categoría, esta exista previamente en la tabla Categoria. Los atributos nombre y precioActual se definieron como obligatorios mediante NOT NULL, mientras que descripcion puede quedar sin valor. Se estableció una restricción CHECK sobre precioActual para garantizar que no se ingresen precios negativos.
 
 ## 5. VARIANTE
 idVariante se definió como clave primaria para identificar cada variante de forma única. El atributo codProducto se definió como clave foránea, garantizando que cada variante esté asociada a un producto existente. Además, talle, color, stock y codProducto se definieron como obligatorios mediante NOT NULL. Se estableció una restricción CHECK sobre stock para garantizar que no se ingresen valores negativos y una restricción UNIQUE sobre la combinación de codProducto, talle y color para evitar variantes duplicadas para un mismo producto.
