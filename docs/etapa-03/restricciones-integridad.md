@@ -4,7 +4,7 @@
 idCliente se definió como clave primaria para identificar cada cliente de forma única. Los atributos nombre, apellido, DNI, telefono y email se definieron como obligatorios mediante NOT NULL. Además, se estableció una restricción UNIQUE sobre DNI y email para evitar duplicados en el registro de los clientes.
 
 ## 2. METODO_PAGO
-
+idMetodoPago se definió como clave primaria para identificar cada método de pago de forma única. El atributo nombre se definió como obligatorio mediante NOT NULL para asegurar que toda modalidad de pago cuente con su respectiva descripción.
 
 ## 3. CATEGORIA
 
