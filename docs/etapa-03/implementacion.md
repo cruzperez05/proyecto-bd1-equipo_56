@@ -16,7 +16,8 @@
 
 
 ## 6. VENTA
-
+La tabla Venta se implementó con idVenta como clave primaria y fecha como dato obligatorio. Además, incluye las claves foráneas idCliente y idMetodoPago, que permiten relacionar cada venta con el cliente que la realizó y con el método de pago utilizado.
+Estas relaciones permiten mantener la integridad referencial entre las tablas.
 
 ## 7. DETALLE_VENTA
 
