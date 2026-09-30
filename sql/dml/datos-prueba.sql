@@ -7,7 +7,15 @@
 -- ---------------------------------------------------------------------
 -- INSERTs de Cliente
 -- ---------------------------------------------------------------------
-
+INSERT INTO Cliente (idCliente, nombre, apellido, DNI, telefono, email) VALUES 
+(1, 'Juan', 'Pérez', '38123456', '3794112233', 'juan.perez@email.com'),
+(2, 'María', 'Gómez', '39876543', '3794223344', 'maria.gomez@email.com'),
+(3, 'Carlos', 'López', '35111222', '3794334455', 'carlos.lopez@email.com'),
+(4, 'Ana', 'Martínez', '41222333', '3794445566', 'ana.martinez@email.com'),
+(5, 'Lucas', 'Rodríguez', '37444555', '3794556677', 'lucas.rodriguez@email.com'),
+(6, 'Sofía', 'Fernández', '40555666', '3794667788', 'sofia.fernandez@email.com'),
+(7, 'Mateo', 'García', '36777888', '3794778899', 'mateo.garcia@email.com'),
+(8, 'Lucía', 'Díaz', '42888999', '3794889900', 'lucia.diaz@email.com');
 
 -- ---------------------------------------------------------------------
 -- INSERTs de Categoria
