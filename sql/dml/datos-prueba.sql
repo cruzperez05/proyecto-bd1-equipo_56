@@ -20,7 +20,15 @@ INSERT INTO Cliente (idCliente, nombre, apellido, DNI, telefono, email) VALUES
 -- ---------------------------------------------------------------------
 -- INSERTs de Categoria
 -- ---------------------------------------------------------------------
-
+INSERT INTO Categoria (idCategoria, nombreCategoria) VALUES 
+(1, 'Remeras'),
+(2, 'Pantalones'),
+(3, 'Camisas'),
+(4, 'Buzos'),
+(5, 'Camperas'),
+(6, 'Shorts'),
+(7, 'Vestidos'),
+(8, 'Calzado');
 
 -- ---------------------------------------------------------------------
 -- INSERTs de Metodo_Pago
@@ -72,7 +80,17 @@ VALUES (10, 'XL', 'Verde', 4, 5);
 -- ---------------------------------------------------------------------
 -- INSERTs de Productos
 -- ---------------------------------------------------------------------
-
+INSERT INTO Producto (codProducto, nombre, descripcion, precioActual, idCategoria) VALUES 
+(1, 'Remera Básica', 'Remera de algodón de manga corta', 18000.00, 1),
+(2, 'Remera Oversize', 'Remera oversize de algodón', 22000.00, 1),
+(3, 'Camisa Casual', 'Camisa casual de manga larga', 32000.00, 3),
+(4, 'Pantalón Chino', 'Pantalón chino de corte clásico', 45000.00, 2),
+(5, 'Buzo con Capucha', 'Buzo de algodón con capucha y bolsillo frontal', 38000.00, 4),
+(6, 'Campera Deportiva', 'Campera deportiva liviana con cierre frontal', 52000.00, 5),
+(7, 'Short Deportivo', 'Short deportivo de secado rápido', 25000.00, 6),
+(8, 'Vestido Casual', 'Vestido casual de tela liviana', 42000.00, 7),
+(9, 'Camisa Polo', 'Camisa polo de algodón', 28000.00, 3),
+(10, 'Zapatillas Urbanas', 'Zapatillas urbanas para uso diario', 65000.00, 8);
 
 -- ---------------------------------------------------------------------
 -- INSERTs de Venta
