@@ -15,7 +15,8 @@ CREATE TABLE Cliente (
 
 -- 2. TABLA: Categoria
 CREATE TABLE Categoria (
-    
+    idCategoria INT PRIMARY KEY,
+    nombreCategoria VARCHAR(50) NOT NULL UNIQUE
 );
 
 -- 3. TABLA: Metodo_Pago
@@ -45,7 +46,18 @@ CREATE TABLE Variante (
 );
 -- 5. TABLA: Productos
 CREATE TABLE Producto (
-    
+    codProducto INT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion VARCHAR(255),
+    precioActual DECIMAL(10,2) NOT NULL,
+    idCategoria INT,
+
+    CONSTRAINT FK_Producto_Categoria
+        FOREIGN KEY (idCategoria)
+        REFERENCES Categoria(idCategoria),
+
+    CONSTRAINT CK_Producto_Precio
+        CHECK (precioActual >= 0)
 );
 
 -- 6. TABLA: Venta
