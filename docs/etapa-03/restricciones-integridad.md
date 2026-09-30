@@ -12,6 +12,7 @@
 
 
 ## 5. VARIANTE
+idVariante se definió como clave primaria para identificar cada variante de forma única. El atributo codProducto se definió como clave foránea, garantizando que cada variante esté asociada a un producto existente. Además, talle, color, stock y codProducto se definieron como obligatorios mediante NOT NULL. Se estableció una restricción CHECK sobre stock para garantizar que no se ingresen valores negativos y una restricción UNIQUE sobre la combinación de codProducto, talle y color para evitar variantes duplicadas para un mismo producto.
 
 
 ## 6. VENTA
