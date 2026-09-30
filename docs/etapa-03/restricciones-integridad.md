@@ -1,6 +1,7 @@
 # Restricciones de Integridad 
 
 ## 1. CLIENTE
+idCliente se definió como clave primaria para identificar cada cliente de forma única. Los atributos nombre, apellido, DNI, telefono y email se definieron como obligatorios mediante NOT NULL. Además, se estableció una restricción UNIQUE sobre DNI y email para evitar duplicados en el registro de los clientes.
 
 ## 2. METODO_PAGO
 
