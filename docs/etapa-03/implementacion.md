@@ -7,10 +7,10 @@ Se define para almacenar la información de los clientes. Contiene un identifica
 Tabla encargada de registrar los distintos medios de pago aceptados, por ejemplo, efectivo, tarjetas, billeteras virtuales, etc. Cuenta con un identificador único idMetodoPago y una descripción nombre para identificar cada una.
 
 ## 3. CATEGORIA
-
+La tabla Categoria se implementó con idCategoria como clave primaria, para identificar de manera única cada categoría de producto. Además, incluye el atributo nombreCategoria, que permite registrar el nombre de cada categoría. Se estableció como obligatorio y único para evitar categorías duplicadas con el mismo nombre.
 
 ## 4. PRODUCTO
-
+La tabla Producto se implementó con codProducto como clave primaria, permitiendo identificar de manera única cada producto. Además, incluye los atributos nombre, descripcion y precioActual, que permiten registrar la información general y el precio vigente de cada producto. También incluye la clave foránea idCategoria, que relaciona cada producto con su categoría correspondiente. El precio actual se encuentra sujeto a una restricción que impide registrar valores negativos.
 
 ## 5. VARIANTE
 La tabla Variante se implementó con idVariante como clave primaria, permitiendo identificar de manera única cada variante de un producto. Además, incluye los atributos talle, color y stock, que permiten registrar las características y la cantidad disponible de cada variante. También incluye la clave foránea codProducto, que relaciona cada variante con el producto al que pertenece.
