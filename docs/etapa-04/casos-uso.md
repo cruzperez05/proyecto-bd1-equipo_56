@@ -59,3 +59,23 @@
 
 **Resultado esperado:** Se obtiene un listado de las variantes con bajo stock, indicando el producto, su categoría, talle, color y cantidad disponible.
 
+
+## CU04 - Consultar historial de compras de un cliente
+
+**Actor:** Empleado del local.
+
+**Objetivo:** Consultar las compras realizadas por un cliente para conocer las fechas de las ventas, los productos adquiridos, las cantidades y los importes correspondientes.
+
+**Descripción:** El empleado consulta el historial de compras de un cliente identificado mediante su número de cliente. El sistema obtiene las ventas asociadas a ese cliente y muestra los productos adquiridos, sus variantes, las cantidades, los precios unitarios y los subtotales correspondientes.
+
+**Flujo principal:**
+
+1. El empleado indica el identificador del cliente cuyo historial desea consultar.
+2. El sistema busca al cliente registrado en la base de datos.
+3. Se obtienen las ventas asociadas al cliente.
+4. Se relacionan las ventas con sus detalles, variantes y productos.
+5. Se calcula el subtotal de cada producto multiplicando la cantidad por el precio unitario registrado en la venta.
+6. Se ordenan las compras desde la más reciente hasta la más antigua.
+7. Se muestra el historial de compras del cliente.
+
+**Resultado esperado:** Se obtiene un historial con las fechas y los identificadores de las ventas, los productos adquiridos, sus talles y colores, las cantidades, los precios unitarios y los subtotales correspondientes.
