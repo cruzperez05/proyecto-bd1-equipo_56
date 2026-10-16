@@ -38,3 +38,24 @@
 6. Se muestra el reporte con los resultados obtenidos.
 
 **Resultado esperado:** Se obtiene un reporte que permite conocer y comparar las ventas de las distintas categorías de productos durante el período seleccionado.
+
+
+## CU03 - Consultar productos con bajo stock
+
+**Actor:** Encargado del local.
+
+**Objetivo:** Identificar las variantes de productos que tienen pocas unidades disponibles para facilitar el control del inventario y detectar necesidades de reposición.
+
+**Descripción:** El encargado consulta el inventario para identificar las variantes de productos cuyo stock es inferior a cinco unidades. El sistema obtiene la información de los productos y sus categorías, mostrando el nombre del producto, el talle, el color y la cantidad disponible.
+
+**Flujo principal:**
+
+1. El encargado solicita consultar los productos con bajo stock.
+2. El sistema busca las variantes registradas en la base de datos.
+3. Se relacionan las variantes con sus productos y categorías.
+4. Se filtran las variantes que tienen menos de cinco unidades disponibles.
+5. Se ordenan los resultados desde el menor stock hasta el mayor.
+6. Se muestra el listado de productos que requieren atención para su posible reposición.
+
+**Resultado esperado:** Se obtiene un listado de las variantes con bajo stock, indicando el producto, su categoría, talle, color y cantidad disponible.
+
