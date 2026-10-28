@@ -125,10 +125,37 @@ Si posteriormente se modifica el precio del producto, este cambio no deberá afe
 │   │   └── 📄casos-uso.md
 │   │ 
 │   └── 📁etapa-05/
+│   │   ├── 📄indices-optimizacion.md
+│   │   ├── 📄procedimientos-funciones.md
+│   │   ├── 📄seguridad.md
+│   │   ├── 📄transacciones.md
+│   │   ├── 📄triggers-auditoria.md
+│   │   └── 📁evidencias/
+│   │       ├── 📁indices-optimizacion/
+│   │       ├── 📁procedimientos-funciones/
+│   │       ├── 📁seguridad/
+│   │       ├── 📁transacciones/
+│   │       └── 📁triggers-auditoria/
+│   │ 
 ├── 📁sql/
-│   ├── consultas/
-│   ├── ddl/
-│   ├── dml/
-│   └── tecnico/
+│   ├── 📁consultas/
+│   │   ├── 📄comprobante_venta.sql
+│   │   ├── 📄consulta_avanzada.sql
+│   │   └── 📄informe_ventas.sql
+│   │   
+│   ├── 📁ddl/
+│   │   └── 📄crear_hd.sql
+│   │   
+│   ├── 📁dml/
+│   │   └── 📄datos-prueba.sql
+│   │   
+│   └── 📁tecnico/
+│       ├── 📄funciones.sql
+│       ├── 📄indices.sql
+│       ├── 📄procedimientos.sql
+│       ├── 📄seguridad.sql
+│       ├── 📄transacciones.sql
+│       └── 📄triggers.sql
+│      
 └── README.md
 ```
