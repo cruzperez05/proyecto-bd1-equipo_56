@@ -125,18 +125,18 @@ Si posteriormente se modifica el precio del producto, este cambio no deberá afe
 │   │   └── 📄casos-uso.md
 │   │ 
 │   └── 📁etapa-05/
-│   │   ├── 📄indices-optimizacion.md
-│   │   ├── 📄procedimientos-funciones.md
-│   │   ├── 📄seguridad.md
-│   │   ├── 📄transacciones.md
-│   │   ├── 📄triggers-auditoria.md
-│   │   └── 📁evidencias/
-│   │       ├── 📁indices-optimizacion/
-│   │       ├── 📁procedimientos-funciones/
-│   │       ├── 📁seguridad/
-│   │       ├── 📁transacciones/
-│   │       └── 📁triggers-auditoria/
-│   │ 
+│       ├── 📄indices-optimizacion.md
+│       ├── 📄procedimientos-funciones.md
+│       ├── 📄seguridad.md
+│       ├── 📄transacciones.md
+│       ├── 📄triggers-auditoria.md
+│       └── 📁evidencias/
+│           ├── 📁indices-optimizacion/
+│           ├── 📁procedimientos-funciones/
+│           ├── 📁seguridad/
+│           ├── 📁transacciones/
+│           └── 📁triggers-auditoria/
+│     
 ├── 📁sql/
 │   ├── 📁consultas/
 │   │   ├── 📄comprobante_venta.sql
