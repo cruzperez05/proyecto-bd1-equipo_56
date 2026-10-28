@@ -33,7 +33,7 @@ INSERT INTO Categoria (idCategoria, nombreCategoria) VALUES
 -- ---------------------------------------------------------------------
 -- INSERTs de Metodo_Pago
 -- ---------------------------------------------------------------------
-INSERT INTO Metodo_Pago (idMetodoPago, nombre) VALUES 
+INSERT INTO Metodo_Pago (idMetodoPago, nombreMetodo) VALUES 
 (1, 'Efectivo'),
 (2, 'Tarjeta de Crédito'),
 (3, 'Tarjeta de Débito'),
