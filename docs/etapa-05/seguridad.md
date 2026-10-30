@@ -14,38 +14,43 @@ En nuestro sistema de gestión de ventas de indumentaria, estos mecanismos permi
 
 ## 3. Implementación en SQL Server
 
-Se utilizaron las siguientes instrucciones:
+Para implementar la seguridad se utilizaron las siguientes instrucciones:
 
-- `CREATE LOGIN`: crea un inicio de sesión en el servidor.
-- `CREATE USER`: crea un usuario dentro de la base de datos asociado a un inicio de sesión.
+- `CREATE USER`: crea un usuario dentro de la base de datos.
 - `CREATE ROLE`: crea un rol para agrupar usuarios con permisos similares.
 - `GRANT`: otorga permisos para realizar determinadas operaciones.
 - `ALTER ROLE ... ADD MEMBER`: incorpora un usuario a un rol.
+- `EXECUTE AS USER`: permite realizar pruebas utilizando los permisos de un usuario determinado.
+- `REVERT`: finaliza la suplantación del usuario y vuelve al contexto anterior.
 
-La implementación se encuentra en el archivo `scripts.sql`. Se creó el rol `rol_consulta_productos`, al que se le otorgó permiso de lectura sobre la tabla `Producto`. Luego, se incorporó un usuario de prueba a dicho rol para controlar el acceso a la información.
+La implementación se encuentra en el archivo `seguridad.sql`, ubicado en la carpeta `SQL/tecnico` del repositorio.
+
+Se creó el rol `rol_consulta_productos`, al que se le otorgó permiso de lectura sobre la tabla `Producto`. Luego, se incorporó un usuario de prueba a dicho rol y se creó otro usuario sin permisos de consulta.
 
 ## 4. Caso aplicado al sistema
 
 Se aplicó el mecanismo de seguridad sobre la tabla `Producto` del sistema de gestión de ventas de indumentaria.
 
-Se realizaron dos pruebas:
+Se definieron dos usuarios de prueba:
 
-- **Usuario autorizado:** se asignó al usuario el rol `rol_consulta_productos`, que le permite consultar los productos registrados.
-- **Usuario sin permisos:** se utilizó un usuario que no posee autorización para consultar la tabla `Producto`.
+- **Usuario autorizado:** `usuario_consulta`, incorporado al rol `rol_consulta_productos`, que le permite consultar los productos registrados.
+- **Usuario sin permisos:** `usuario_sin_permiso`, que no posee autorización para consultar la tabla `Producto`.
 
-De esta manera, se comprobó cómo los permisos permiten controlar el acceso a la información según el rol de cada usuario.
+De esta manera, se establecieron distintos niveles de acceso según los permisos asignados a cada usuario.
 
 ## 5. Demostración y resultados
 
-### Prueba exitosa - Usuario autorizado
+Para comprobar el funcionamiento de los permisos se realizaron dos pruebas.
 
-Se ejecutó la consulta `SELECT * FROM dbo.Producto;` con un usuario que pertenece al rol `rol_consulta_productos`.
+### 5.1. Prueba exitosa - Usuario autorizado
+
+Se utilizó el usuario `usuario_consulta`, que pertenece al rol `rol_consulta_productos`, y se ejecutó la consulta `SELECT * FROM dbo.Producto;`.
 
 **Resultado esperado:** la consulta se ejecuta correctamente y muestra los productos registrados en la base de datos.
 
-### Prueba fallida - Usuario sin permisos
+### 5.2. Prueba fallida - Usuario sin permisos
 
-Se ejecutó la misma consulta con un usuario que no tiene permisos de lectura sobre la tabla `Producto`.
+Se utilizó el usuario `usuario_sin_permiso`, que no tiene permisos de lectura sobre la tabla `Producto`, y se intentó ejecutar la misma consulta.
 
 **Resultado esperado:** SQL Server rechaza la consulta e informa que el usuario no tiene permisos para acceder a la tabla.
 
