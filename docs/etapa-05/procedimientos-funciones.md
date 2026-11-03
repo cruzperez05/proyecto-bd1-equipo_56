@@ -14,5 +14,16 @@ La implementación técnica se estructuró en dos scripts independientes ubicado
 * `sql/tecnico/procedimientos.sql`: Contiene los procedimientos orientados a operaciones CRUD y tareas operativas.
 * `sql/tecnico/funciones.sql`: Contiene la función escalar diseñada para cálculos dinámicos
 
+## 4. Caso Concreto Aplicado al Sistema de Indumentaria
+* **Función (`fn_CalcularTotalVenta`):** Resuelve la necesidad de calcular de manera dinámica el importe total de una transacción específica a partir de los registros de la tabla de detalles, evitando errores de cálculo manual.
+* **Procedimientos (`sp_InsertarCliente` y `sp_ActualizarPrecioProducto`):** Automatizan de forma segura el alta de nuevos clientes y la modificación de precios de las prendas sin alterar el historial comercial.
 
+## 5. Script de Demostración y Resultados Obtenidos
+```sql
+-- Demostración de llamada a la función almacenada dentro de una consulta
+SELECT 
+    id_venta, 
+    fecha, 
+    dbo.fn_CalcularTotalVenta(id_venta) AS TotalGeneral 
+FROM Venta;
 
