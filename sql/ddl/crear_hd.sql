@@ -26,7 +26,23 @@ CREATE TABLE Metodo_Pago (
     descripcion VARCHAR(100)
 );
 
--- 4. TABLA: Variante
+-- 4. TABLA: Producto
+CREATE TABLE Producto (
+    codProducto INT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion VARCHAR(255),
+    precioActual DECIMAL(10,2) NOT NULL,
+    idCategoria INT,
+
+    CONSTRAINT FK_Producto_Categoria
+        FOREIGN KEY (idCategoria)
+        REFERENCES Categoria(idCategoria),
+
+    CONSTRAINT CK_Producto_Precio
+        CHECK (precioActual >= 0)
+);
+
+-- 5. TABLA: Variante
 CREATE TABLE Variante (
     idVariante INT PRIMARY KEY,
     talle VARCHAR(10) NOT NULL,
@@ -43,21 +59,6 @@ CREATE TABLE Variante (
 
     CONSTRAINT UQ_Variante_Producto_Talle_Color
         UNIQUE (codProducto, talle, color)
-);
--- 5. TABLA: Productos
-CREATE TABLE Producto (
-    codProducto INT PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
-    descripcion VARCHAR(255),
-    precioActual DECIMAL(10,2) NOT NULL,
-    idCategoria INT,
-
-    CONSTRAINT FK_Producto_Categoria
-        FOREIGN KEY (idCategoria)
-        REFERENCES Categoria(idCategoria),
-
-    CONSTRAINT CK_Producto_Precio
-        CHECK (precioActual >= 0)
 );
 
 -- 6. TABLA: Venta
@@ -98,3 +99,4 @@ CREATE TABLE Detalle_Venta (
     CONSTRAINT CK_Detalle_Precio
         CHECK (precioUnitario > 0)
 );
+```
