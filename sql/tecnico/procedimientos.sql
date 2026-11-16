@@ -1,12 +1,14 @@
 CREATE PROCEDURE sp_InsertarCliente
+    @dni VARCHAR(20),
     @nombre VARCHAR(50),
     @apellido VARCHAR(50),
     @telefono VARCHAR(20),
-    @email VARCHAR(100)
+    @email VARCHAR(100),
+    @direccion VARCHAR(100)
 AS
 BEGIN
-    INSERT INTO Cliente (nombre, apellido, telefono, email)
-    VALUES (@nombre, @apellido, @telefono, @email);
+    INSERT INTO Cliente (dni, nombre, apellido, telefono, email, direccion)
+    VALUES (@dni, @nombre, @apellido, @telefono, @email, @direccion);
 END;
 GO
 
@@ -16,7 +18,7 @@ CREATE PROCEDURE sp_ActualizarPrecioProducto
 AS
 BEGIN
     UPDATE Producto
-    SET precio_actual = @nuevo_precio
-    WHERE id_producto = @id_producto;
+    SET precioActual = @nuevo_precio
+    WHERE codProducto = @id_producto;
 END;
 GO
