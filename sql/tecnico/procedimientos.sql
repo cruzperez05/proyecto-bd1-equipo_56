@@ -8,8 +8,8 @@ CREATE PROCEDURE sp_InsertarCliente
     @direccion VARCHAR(100)
 AS
 BEGIN
-    INSERT INTO Cliente (dni, nombre, apellido, telefono, email, direccion)
-    VALUES (@dni, @nombre, @apellido, @telefono, @email, @direccion);
+    INSERT INTO Cliente (idCliente, dni, nombre, apellido, telefono, email, direccion)
+    VALUES (@id_cliente, @dni, @nombre, @apellido, @telefono, @email, @direccion);
 END;
 GO
 
