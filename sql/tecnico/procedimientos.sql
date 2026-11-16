@@ -1,4 +1,5 @@
 CREATE PROCEDURE sp_InsertarCliente
+    @id_cliente INT,
     @dni VARCHAR(20),
     @nombre VARCHAR(50),
     @apellido VARCHAR(50),
