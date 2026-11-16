@@ -2,20 +2,18 @@
 -- Etapa 3: Script DML (8 a 10 registros por tabla)
 -- =====================================================================
 
-
-
 -- ---------------------------------------------------------------------
 -- INSERTs de Cliente
 -- ---------------------------------------------------------------------
-INSERT INTO Cliente (idCliente, nombre, apellido, DNI, telefono, email) VALUES 
-(1, 'Juan', 'Pérez', '38123456', '3794112233', 'juan.perez@email.com'),
-(2, 'María', 'Gómez', '39876543', '3794223344', 'maria.gomez@email.com'),
-(3, 'Carlos', 'López', '35111222', '3794334455', 'carlos.lopez@email.com'),
-(4, 'Ana', 'Martínez', '41222333', '3794445566', 'ana.martinez@email.com'),
-(5, 'Lucas', 'Rodríguez', '37444555', '3794556677', 'lucas.rodriguez@email.com'),
-(6, 'Sofía', 'Fernández', '40555666', '3794667788', 'sofia.fernandez@email.com'),
-(7, 'Mateo', 'García', '36777888', '3794778899', 'mateo.garcia@email.com'),
-(8, 'Lucía', 'Díaz', '42888999', '3794889900', 'lucia.diaz@email.com');
+INSERT INTO Cliente (idCliente, dni, nombre, apellido, telefono, email, direccion) VALUES 
+(1, '38123456', 'Juan', 'Pérez', '3794112233', 'juan.perez@email.com', 'Corrientes'),
+(2, '39876543', 'María', 'Gómez', '3794223344', 'maria.gomez@email.com', 'Corrientes'),
+(3, '35111222', 'Carlos', 'López', '3794334455', 'carlos.lopez@email.com', 'Resistencia'),
+(4, '41222333', 'Ana', 'Martínez', '3794445566', 'ana.martinez@email.com', 'Corrientes'),
+(5, '37444555', 'Lucas', 'Rodríguez', '3794556677', 'lucas.rodriguez@email.com', 'Resistencia'),
+(6, '40555666', 'Sofía', 'Fernández', '3794667788', 'sofia.fernandez@email.com', 'Corrientes'),
+(7, '36777888', 'Mateo', 'García', '3794778899', 'mateo.garcia@email.com', 'Corrientes'),
+(8, '42888999', 'Lucía', 'Díaz', '3794889900', 'lucia.diaz@email.com', 'Resistencia');
 
 -- ---------------------------------------------------------------------
 -- INSERTs de Categoria
@@ -44,9 +42,23 @@ INSERT INTO Metodo_Pago (idMetodoPago, nombreMetodo) VALUES
 (8, 'Pago Fácil / RapiPago');
 
 -- ---------------------------------------------------------------------
+-- INSERTs de Productos
+-- ---------------------------------------------------------------------
+INSERT INTO Producto (codProducto, nombre, descripcion, precioActual, idCategoria) VALUES 
+(1, 'Remera Básica', 'Remera de algodón de manga corta', 18000.00, 1),
+(2, 'Remera Oversize', 'Remera oversize de algodón', 22000.00, 1),
+(3, 'Camisa Casual', 'Camisa casual de manga larga', 32000.00, 3),
+(4, 'Pantalón Chino', 'Pantalón chino de corte clásico', 45000.00, 2),
+(5, 'Buzo con Capucha', 'Buzo de algodón con capucha y bolsillo frontal', 38000.00, 4),
+(6, 'Campera Deportiva', 'Campera deportiva liviana con cierre frontal', 52000.00, 5),
+(7, 'Short Deportivo', 'Short deportivo de secado rápido', 25000.00, 6),
+(8, 'Vestido Casual', 'Vestido casual de tela liviana', 42000.00, 7),
+(9, 'Camisa Polo', 'Camisa polo de algodón', 28000.00, 3),
+(10, 'Zapatillas Urbanas', 'Zapatillas urbanas para uso diario', 65000.00, 8);
+
+-- ---------------------------------------------------------------------
 -- INSERTs de Variante
 -- ---------------------------------------------------------------------
-
 INSERT INTO Variante (idVariante, talle, color, stock, codProducto)
 VALUES (1, 'S', 'Negro', 10, 1);
 
@@ -76,21 +88,6 @@ VALUES (9, 'M', 'Rojo', 8, 4);
 
 INSERT INTO Variante (idVariante, talle, color, stock, codProducto)
 VALUES (10, 'XL', 'Verde', 4, 5);
-
--- ---------------------------------------------------------------------
--- INSERTs de Productos
--- ---------------------------------------------------------------------
-INSERT INTO Producto (codProducto, nombre, descripcion, precioActual, idCategoria) VALUES 
-(1, 'Remera Básica', 'Remera de algodón de manga corta', 18000.00, 1),
-(2, 'Remera Oversize', 'Remera oversize de algodón', 22000.00, 1),
-(3, 'Camisa Casual', 'Camisa casual de manga larga', 32000.00, 3),
-(4, 'Pantalón Chino', 'Pantalón chino de corte clásico', 45000.00, 2),
-(5, 'Buzo con Capucha', 'Buzo de algodón con capucha y bolsillo frontal', 38000.00, 4),
-(6, 'Campera Deportiva', 'Campera deportiva liviana con cierre frontal', 52000.00, 5),
-(7, 'Short Deportivo', 'Short deportivo de secado rápido', 25000.00, 6),
-(8, 'Vestido Casual', 'Vestido casual de tela liviana', 42000.00, 7),
-(9, 'Camisa Polo', 'Camisa polo de algodón', 28000.00, 3),
-(10, 'Zapatillas Urbanas', 'Zapatillas urbanas para uso diario', 65000.00, 8);
 
 -- ---------------------------------------------------------------------
 -- INSERTs de Venta
