@@ -119,3 +119,21 @@ SELECT
 FROM Auditoria_Producto
 ORDER BY idAuditoria;
 GO
+
+-- ============================================================
+-- LIMPIAR CAMBIOS
+-- ============================================================
+
+-- 1. Eliminar el trigger si existe
+IF OBJECT_ID('dbo.TR_Auditoria_Producto', 'TR') IS NOT NULL
+    DROP TRIGGER dbo.TR_Auditoria_Producto;
+GO
+
+-- 2. Eliminar la tabla de auditoría si existe
+IF OBJECT_ID('dbo.Auditoria_Producto', 'U') IS NOT NULL
+    DROP TABLE dbo.Auditoria_Producto;
+GO
+
+-- 3. Limpiar el producto de prueba 100 por si quedó insertado
+DELETE FROM Producto WHERE codProducto = 100;
+GO
