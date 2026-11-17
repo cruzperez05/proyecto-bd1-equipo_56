@@ -53,3 +53,9 @@ SELECT *
 FROM Producto
 WHERE codProducto = 1;
 GO
+
+-- ============================================================
+-- LIMPIAR CAMBIOS
+-- ============================================================
+DELETE FROM Cliente WHERE idCliente = 99;
+UPDATE Producto SET precioActual = 18000.00 WHERE codProducto = 1;
