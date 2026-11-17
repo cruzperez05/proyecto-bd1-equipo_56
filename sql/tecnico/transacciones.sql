@@ -67,3 +67,12 @@ SELECT * FROM Detalle_Venta WHERE idDetalle IN (11, 12);
 SELECT idVariante, stock
 FROM Variante
 WHERE idVariante = 1;
+
+SELECT * FROM Venta;
+
+-- ============================================================
+-- LIMPIAR CAMBIOS
+-- ============================================================
+DELETE FROM Detalle_Venta WHERE idDetalle = 11;
+DELETE FROM Venta WHERE idVenta = 9;
+UPDATE Variante SET stock = 10 WHERE idVariante = 1;
