@@ -43,3 +43,23 @@ END CATCH;
 
 REVERT;
 GO
+
+-- ============================================================
+-- LIMPIAR CAMBIOS
+-- ============================================================
+-- 1. Asegurar que la sesión esté en el usuario principal (por si quedó con EXECUTE AS USER)
+REVERT;
+GO
+
+-- 2. Eliminar los usuarios de prueba si existen
+IF EXISTS (SELECT 1 FROM sys.database_principals WHERE name = 'usuario_consulta')
+    DROP USER usuario_consulta;
+
+IF EXISTS (SELECT 1 FROM sys.database_principals WHERE name = 'usuario_sin_permiso')
+    DROP USER usuario_sin_permiso;
+GO
+
+-- 3. Eliminar el rol personalizado si existe
+IF EXISTS (SELECT 1 FROM sys.database_principals WHERE name = 'rol_consulta_productos')
+    DROP ROLE rol_consulta_productos;
+GO
