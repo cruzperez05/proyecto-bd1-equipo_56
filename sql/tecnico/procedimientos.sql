@@ -23,3 +23,33 @@ BEGIN
     WHERE codProducto = @id_producto;
 END;
 GO
+    
+-- 1. PRUEBA: INSERTAR CLIENTE
+
+EXEC sp_InsertarCliente
+    @id_cliente = 9,
+    @dni = '12345678',
+    @nombre = 'Ana',
+    @apellido = 'Perez',
+    @telefono = '3794000000',
+    @email = 'ana@gmail.com',
+    @direccion = 'Corrientes';
+
+-- VERIFICACION DEL CLIENTE INSERTADO
+
+SELECT *
+FROM Cliente
+WHERE idCliente = 9;
+
+-- 2. PRUEBA: ACTUALIZAR PRECIO DEL PRODUCTO
+
+EXEC sp_ActualizarPrecioProducto
+    @id_producto = 1,
+    @nuevo_precio = 25000;
+
+-- VERIFICACION DEL PRECIO ACTUALIZADO
+
+SELECT *
+FROM Producto
+WHERE codProducto = 1;
+GO
