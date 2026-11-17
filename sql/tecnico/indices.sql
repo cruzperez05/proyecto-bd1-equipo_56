@@ -1,7 +1,9 @@
-
+USE TiendaIndumentaria;
 GO
 
-
+-- 1. INDICE PARA BUSCAR VENTAS POR FECHA
+-- Optimiza los filtros por rango de fechas y ordenamientos temporales
+-- en consultas y reportes sobre la tabla Venta.
 IF NOT EXISTS (
     SELECT 1
     FROM sys.indexes
@@ -14,8 +16,9 @@ BEGIN
 END;
 GO
 
-
-
+-- 2. INDICE PARA BUSCAR DETALLES POR VENTA
+-- Optimiza las uniones (JOIN) entre Venta y Detalle_Venta
+-- al consultar los renglones o calcular el total de una venta.
 IF NOT EXISTS (
     SELECT 1
     FROM sys.indexes
@@ -46,7 +49,7 @@ END;
 GO
 
 
-
+-- Verificación rápida de creación
 SELECT
     t.name AS Tabla,
     i.name AS Indice,
